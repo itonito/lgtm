@@ -24,11 +24,11 @@ jobs:
       - run:
           command: |
             python3 -m unittest -v
-  workflows:
-    version: 2
-    all: 
-      jobs:
-        - setup_dependencies 
-        - test:
-            requires:
-              - setup_dependencies
+workflows:
+  version: 2
+  all: 
+    jobs:
+      - setup_dependencies 
+      - test:
+          requires:
+            - setup_dependencies
